@@ -1,9 +1,14 @@
 #' Load data set from URL
 #'
 #' This function return a dataset retrieve from gso.gov.vn from user provided URL
+#' @param url link to the dataset from gso_avail()
+#' @return A list that contain title and dataset
 #' @importFrom dplyr %>%
 
+#' @export
 gso_read = function(url){
+
+  . = NULL
   #url = x$link[1]
 # send request with no-SSL config
   conf = httr::config(ssl_verifypeer = FALSE)
@@ -61,7 +66,7 @@ data = result %>%
   rvest::html_table() %>%
   .[[1]]
 colnames(data) = data[1, ]
-data= data[-1, ]
+data = data[-1, ]
 
 list(title = title, data= data)
 }

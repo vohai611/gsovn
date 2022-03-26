@@ -1,17 +1,22 @@
 Package: gsovn
 Type: Package
-Title: Package to retrieve (scrape) data from gso.gov.vn (Vietnam general statistic organization)
+Title: gso.gov.vn data scraper
 Version: 0.1.0
-Author: Hai Ngoc Vo 
+Authors@R: person("Hai", "Vo", role = c("aut", "cre", "cph"), email ="hai835559@gmail.com") 
 Maintainer: The package maintainer <haingocvo96@gmail.com>
-Description: This package 
+Description: This package provided interface to retrieve (scrape) data from gso.gov.vn (Vietnam general statistic organization).
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+ByteCompile: true
 Imports: 
     dplyr,
     httr,
     rlang,
     rvest,
+    stringi,
+    stringr,
     tibble
+URL: https://github.com/vohai611/gso_vn
+BugReports: https://github.com/vohai611/gso_vn/issues
 RoxygenNote: 7.1.2

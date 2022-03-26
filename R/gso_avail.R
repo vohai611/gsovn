@@ -6,6 +6,7 @@
 #' @export
 
 gso_avail = function(){
+  link = title = NULL
   url = "https://www.gso.gov.vn/so-lieu-thong-ke/"
   #on.exit(close(url(url, 'rb')), add = TRUE)
 
