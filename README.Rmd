@@ -1,0 +1,51 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+
+
+The goal of gsovn is to scrape dataset from [gso.gov.vn[(https://gso.gov.vn) (Vietnam General statistic organization)
+
+## Installation
+
+You can install the development version of gsovn from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("vohai611/gsovn")
+```
+# TODO
+
+  1. Add option to download csv
+
+  2. use `{{crul}}` to send asynch request in the case download multiple dataset
+
+## Example
+
+You can check what dataset is now on gso.gov.vn
+
+```{r example}
+library(gsovn)
+df = gso_avail()
+head(df)
+```
+
+To get the data set you want, use `gso_read(url)`.
+
+```{r}
+df$link[2] |> gso_read()
+```
+
+This function call `rvest::html_table()` to parse html to tibble, therefore the result might be slow. I will add the option to download csv file in the future
+
