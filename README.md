@@ -15,7 +15,7 @@ You can install the development version of gsovn from
 devtools::install_github("vohai611/gsovn")
 ```
 
-# TODO
+## TODO
 
 1.  Add option to download csv
 
@@ -60,7 +60,7 @@ df$link[2] |> gso_read()
 #>  6 Quảng Ni… 617,8            60,8             373,7            45,5            
 #>  7 Hải Dương 166,8            85,7             9,3              31,5            
 #>  8 Hải Phòng 156,2            50,5             19,2             29,3            
-#>  9 Hưng Yên  93,0             53,6             ..               17,7            
+#>  9 Hưng Yên  93,0             53,6             <NA>             17,7            
 #> 10 Thái Bình 158,6            92,9             0,9              30,1            
 #> # … with 61 more rows, and 1 more variable: `Đất ở` <chr>
 ```
