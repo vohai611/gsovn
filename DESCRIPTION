@@ -20,3 +20,5 @@ Imports:
 URL: https://github.com/vohai611/gso_vn
 BugReports: https://github.com/vohai611/gso_vn/issues
 RoxygenNote: 7.1.2
+Depends: 
+    R (>= 2.10)

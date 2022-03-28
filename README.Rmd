@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 
 
-The goal of gsovn is to scrape dataset from [gso.gov.vn[(https://gso.gov.vn) (Vietnam General statistic organization)
+The goal of gsovn is to scrape dataset from [gso.gov.vn](https://gso.gov.vn) (Vietnam General statistic organization)
 
 ## Installation
 

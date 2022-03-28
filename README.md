@@ -2,7 +2,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 The goal of gsovn is to scrape dataset from
-\[gso.gov.vn\[(<https://gso.gov.vn>) (Vietnam General statistic
+[gso.gov.vn](https://gso.gov.vn) (Vietnam General statistic
 organization)
 
 ## Installation
