@@ -1,13 +1,20 @@
 #' Retrieve available data set
 #'
 #' Get available data on https://www.gso.gov.vn/so-lieu-thong-ke/
+#' @param lang Language of choices: Vietnamese or English
 #' @importFrom dplyr %>%
-#' @return A tibble contain all data set tittle from gso.gov.vn
+#' @return A tibble contain all data set tittle and link to them from gso.gov.vn
 #' @export
 
-gso_avail = function(){
+gso_avail = function(lang = c("vi", "en")){
   link = title = NULL
-  url = "https://www.gso.gov.vn/so-lieu-thong-ke/"
+  lang = match.arg(lang)
+
+  if (lang == "vi") {
+    url = "https://www.gso.gov.vn/so-lieu-thong-ke/"
+  } else {
+    url = "https://www.gso.gov.vn/en/statistical-data/"
+  }
   #on.exit(close(url(url, 'rb')), add = TRUE)
 
   # turn off SSL

@@ -4,10 +4,13 @@
 \alias{gso_avail}
 \title{Retrieve available data set}
 \usage{
-gso_avail()
+gso_avail(lang = c("vi", "en"))
+}
+\arguments{
+\item{lang}{Language of choices: Vietnamese or English}
 }
 \value{
-A tibble contain all data set tittle from gso.gov.vn
+A tibble contain all data set tittle and link to them from gso.gov.vn
 }
 \description{
 Get available data on https://www.gso.gov.vn/so-lieu-thong-ke/
