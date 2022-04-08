@@ -3,11 +3,14 @@ name: Scrape
 
 on:
   schedule:
-    - cron: "*/2 * * * *"
-
+    - cron: "1 1 * * *"
+  push:
+    branches: [main, master]
 jobs:
   scrape:
     runs-on: macos-latest
+    env:
+      GITHUB_PAT: ${{secrets.GITHUB_TOKEN}}
 
     steps:
 
