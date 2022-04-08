@@ -1,5 +1,8 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/vohai611/gsovn/workflows/R-CMD-check/badge.svg)](https://github.com/vohai611/gsovn/actions)
+<!-- badges: end -->
 
 The goal of gsovn is to scrape dataset from
 [gso.gov.vn](https://gso.gov.vn) (Vietnam General statistic
