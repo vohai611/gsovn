@@ -2,6 +2,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/vohai611/gsovn/workflows/R-CMD-check/badge.svg)](https://github.com/vohai611/gsovn/actions)
+[![Scrape](https://github.com/vohai611/gsovn/actions/workflows/Scrape.yaml/badge.svg)](https://github.com/vohai611/gsovn/actions/workflows/Scrape.yaml)
 <!-- badges: end -->
 
 The goal of gsovn is to scrape dataset from
