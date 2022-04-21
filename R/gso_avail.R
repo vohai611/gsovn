@@ -2,11 +2,12 @@
 #'
 #' Get available data on https://www.gso.gov.vn/so-lieu-thong-ke/
 #' @param lang Language of choices: Vietnamese or English
+#' @param search_term Optional term to search through
 #' @importFrom dplyr %>%
 #' @return A tibble contain all data set tittle and link to them from gso.gov.vn
 #' @export
 
-gso_avail = function(lang = c("vi", "en")){
+gso_avail = function(lang = c("vi", "en"), search_term = NULL){
   link = title = NULL
   lang = match.arg(lang)
 
@@ -32,12 +33,13 @@ gso_avail = function(lang = c("vi", "en")){
 
   df = df %>%
     dplyr::mutate(title_clean =  stringi::stri_trans_general(title, id = "Latin - ASCII"))
-  #%>%
-    # dplyr::mutate(code = vapply(title, rlang::hash, character(1)),
-    #               code= paste0(stringr::str_sub(title_clean, 1,2), stringr::str_sub(code, 1,5)),
-    #               .before= title)
 
-  df
+  if(!is.null(search_term)){
+    df %>%
+      dplyr::filter(stringr::str_detect(title,
+                                        stringr::regex(search_term, ignore_case = TRUE)))
+  } else { df}
+
 }
 
 
