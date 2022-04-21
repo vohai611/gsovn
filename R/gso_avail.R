@@ -10,6 +10,7 @@
 gso_avail = function(lang = c("vi", "en"), search_term = NULL){
   link = title = NULL
   lang = match.arg(lang)
+  if(!is.null(search_term)) search_term = stringi::stri_trans_general(search_term, id = "Latin - ASCII")
 
   if (lang == "vi") {
     url = "https://www.gso.gov.vn/so-lieu-thong-ke/"
@@ -36,9 +37,9 @@ gso_avail = function(lang = c("vi", "en"), search_term = NULL){
 
   if(!is.null(search_term)){
     df %>%
-      dplyr::filter(stringr::str_detect(title,
+      dplyr::filter(stringr::str_detect(title_clean,
                                         stringr::regex(search_term, ignore_case = TRUE)))
-  } else { df}
+  } else {df}
 
 }
 
